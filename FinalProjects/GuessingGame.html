@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Guessing Game project</title>
+		<meta charset="utf-8">
+		<meta id="description" content="JS Guessing Game project">
+		<meta id="keywords" content="JavaScript, HTML">
+		<meta id="author" content="Keegan Ales">
+	
+<script>
+		// Programmer: Keegan Ales
+
+		var theNumber = Math.floor(Math.random()*100+1);
+		
+		function checkGuess() {
+			var guess = document.getElementById("guess");
+			var output = document.getElementById("output");
+			var myNumber = guess.value;
+		
+		if (myNumber < theNumber) {
+			output.value = "Too low, try again!";
+			//alert("Too low, try again!");
+}
+		else if (myNumber > theNumber) {
+			output.value = "Too high, try again!";
+}
+		else if (myNumber == theNumber) {
+			output.value = "You got the number, you win!";
+			alert("The number was " + theNumber + "! You Win! Play again...");
+			theNumber = Math.floor(Math.random()*100+1);
+}
+}
+</script>
+<style>
+	*{
+		text-align: center;
+	}
+	body{
+		background-color: cyan;
+		border: 5px solid brown;
+		margin: 15%;
+	}
+	form{
+		margin: 2px;
+	}
+	#output{
+		margin-bottom: 25px;
+	}
+</style>
+	</head>
+	
+	
+	<body>
+<h1>Keegan's Guessing Game</h1>
+<form>
+Enter a number from 1 to 100:
+<input id="guess" type="text" size="8" /><br />
+<input type="button" value="Guess" onclick="checkGuess()" /><br />
+<input id="output" type="text" size="40" /><br />
+</form>
+
+</body>
+</html>

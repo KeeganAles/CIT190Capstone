@@ -1,0 +1,11 @@
+*{
+  text-align: center;
+}
+body{
+		background-color: cyan;
+		border: 5px solid brown;
+		margin: 15%;
+	}
+h3 {
+	background-color: #aaa;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ales | Rock, Paper, Scissors</title>
+
+    </head>
+
+    <body>
+        <h1>Rock, Paper, Scissors!</h1>
+        <br>
+        <button type="button" onclick="GetUserChoice('Rock')">Rock</button>
+        <button type="button" onclick="GetUserChoice('Paper')">Paper</button>
+        <button type="button" onclick="GetUserChoice('Scissors')">Scissors</button>
+        <br>
+        <button type="button" onclick="GetComputerChoice('cChoice')">Test Computer</button>
+        <p id="uc">hello</p>
+        <p id="cc">hello2</p>
+        <br>
+            <script>
+
+                function GetUserChoice(userChoice){
+                    document.getElementById("uc").innerHTML = userChoice;
+                }
+                
+                function GetComputerChoice(cChoice){
+                    var options = ["Rock", "Paper", "Scissors"];
+                    var computerChoice = options[Math.floor(Math.random()*3)];
+                    document.getElementById("cc").innerHTML = computerChoice;
+                }
+
+            </script>
+        
+
+    </body>
+</html>
